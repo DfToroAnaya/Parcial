@@ -64,3 +64,55 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+## instrucciones para correr el codigo 
+
+1. Crear caprteta
+
+En tu escritorio das click derecho y le precionas a nueva carpeta, le pones cualquier nombre.
+
+entras a la carpeta y en la parte de arriba donde esta la ruta de la carpeta seleccionas y escribes CMD y das enter.
+
+2. clonar el proyecto
+
+una vez dentro de la consola de CMD copias el siguiente codigo git clone https://github.com/DfToroAnaya/Parcial.git esperas a que cargue.
+
+una vez descargado cierras el cmd y vuelves a ingresar a la carpeta donde deberia esatr ya el proyecto clonado, ingresas a la carpeta del proyecto y ejecutas nuevamente en la ruta el cmd y precionas enter, una vez ya abierto el cmd escribes el codigo: code .
+
+despues de eso te abrira el proyecto en visual studio code.
+
+3. Instalacion de paquetes requeridos
+
+ejecutas el comando ctrol + shift + ñ 
+
+con esto se abrira la terminal dentro del visual studio code, ahora ejecutamos dentro de la consola el siguiente comando: 
+
+- composer install: esta instala la carpeta vendor
+- npm install : este instala el node.js
+
+4. acomodar la carpeta env 
+
+copias la carpeta llamada .env.example y la pegas dentro del proyecto, la carpeta copiada la renombramos como .env
+
+5.creacion de base de datos
+
+En el buscador de windows ponemos Xampp y le precionamos enter, una vez abierto el programa vamos a oprimir start en los modulos: Apache y mysql
+
+despues de hacer esto nos vamos a google y en el buscador ponemos locallhost y precionamos enter este nos abrira la pagina de xampp y nos vamos en las opciones de arriba a la aprte donde dice phpmyadmin dentro de el vamnos acrear la base de datos llamada parcial luego de crearlo volvemos al proyecto en visual studio y vamos a la carpeta recien nombrada .env y acomodamos los datos de la base de datos asi:
+
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=parcial
+DB_USERNAME=root
+DB_PASSWORD=
+
+5. Ejecutando proyecto
+
+Vamo a la terminal nuevamente y ejecutamos el comando php artisan migrate esto se hace para crear las tablas en la base de datos.
+
+En la misma terminal ejecutamos el comando npm run dev que es el que corre el vite
+
+ ya con esto ejecutamos el codigo php artisan serve, nos arrojara un  link que es el que nos permite  visualizar el proyecto 
+
+
