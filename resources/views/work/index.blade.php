@@ -26,7 +26,7 @@
     <div class="container">
         <h1>List the Work</h1>
         <a href="{{ route('works.create')}}" class=" btn btn-success">Add</a>
-        <table class="table">
+        <table class="table table-dark table-striped">
             <thead>
               <tr>
                 <th scope="col">Code</th>
@@ -36,6 +36,7 @@
                 <th scope="col">Tecnica</th>
                 <th scope="col">Dimensiones</th>
                 <th scope="col">Descripcion</th>
+                <th scope="col">Actions</th>
               </tr>
             </thead>
             <tbody>
