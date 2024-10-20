@@ -13,10 +13,12 @@
   <body>
     <div class="container">
         <h1>List the Work</h1>
+        <a href="{{ route('works.create')}}" class=" btn btn-success">Add</a>
         <table class="table">
             <thead>
               <tr>
                 <th scope="col">Code</th>
+                <th scope="col">Artista</th>
                 <th scope="col">Titulo</th>
                 <th scope="col">Año</th>
                 <th scope="col">Tecnica</th>
@@ -27,13 +29,23 @@
             <tbody>
               @foreach ($works as $work)
               <tr>
-                <th scope="row">{{$work->$id}}</th>
+                <th scope="row">{{$work->id}}</th>
+                <td>{{ $work->nombre}}</td>
                 <td>{{ $work->título}}</td>
                 <td>{{ $work->año}}</td>
                 <td>{{ $work->tecnica}}</td>
                 <td>{{ $work->dimensiones}}</td>
                 <td>{{ $work->descripcion}}</td>
-                <td><span> Actions </span></td>
+                <td>
+                  <a href="{{ route('works.edit', ['work' => $work->id])}}" class="btn btn-info">Edit</a>
+
+                  <form action="{{ route('works.destroy', ['work' => $work->id])}}"
+                    method="POST" style="display: inline-block">
+                  @method('delete')
+                  @csrf
+                  <input class="btn btn-danger" type="submit" value="Delete"> 
+                </form>
+                </td>
               </tr>                  
               @endforeach
             </tbody>

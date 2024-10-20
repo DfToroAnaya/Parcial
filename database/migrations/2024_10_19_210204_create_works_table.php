@@ -15,9 +15,9 @@ return new class extends Migration
             $table->id();
             $table->foreignId('artista_id')->constrained('artists')->onDelete('cascade');
             $table->string('título',255);
-            $table->date('año');
+            $table->integer('año');
             $table->string('tecnica',255);
-            $table->enum('dimensiones',['largo','ancho','alto']);
+            $table->string('dimensiones',255);
             $table->string('descripcion',255);
             $table->timestamps();
         });
